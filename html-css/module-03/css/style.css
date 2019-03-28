@@ -81,7 +81,7 @@ body {
   margin-right: 60px;
 }
 
-.article:nth-last-child(-n + 3) {
+.article:nth-last-child(-n + 2) {
   margin-bottom: 0;
 }
 
@@ -108,19 +108,15 @@ body {
   line-height: 24px;
 }
 
-.btn-wrap {
-  margin: 46px 0 70px;
-  text-align: center;
-}
-
 .btn {
-  display: inline-block;
+  display: block;
+  margin: 46px auto 70px;
   padding: 18px 32px;
-  margin: auto;
   font-family: 'Playfair Display', sans-serif;
   color: #626262;
   font-size: 20px;
   line-height: 24px;
+  text-align: center;
   border: 1px solid #626262;
   background-color: transparent;
   cursor: pointer;
