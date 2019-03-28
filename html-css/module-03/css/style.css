@@ -68,11 +68,12 @@ body {
 }
 
 .articles {
+  padding: 0 0 70px;
   font-size: 0;
 }
 
 .articles-list {
-  margin: 0;
+  margin: 0 0 46px;
   padding: 0;
   list-style: none;
 }
@@ -120,7 +121,7 @@ body {
 
 .btn {
   display: block;
-  margin: 46px auto 70px;
+  margin: 0 auto;
   padding: 18px 32px;
   font-family: 'Playfair Display', sans-serif;
   color: #626262;
