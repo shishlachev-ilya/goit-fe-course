@@ -1,0 +1,277 @@
+/* global style */
+
+:root {
+  --font-light: 300;
+  --font-regular: 400;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-black: 900;
+  --color-dark: #0f0101;
+  --color-green: #1abc9c;
+  --color-head: #515151;
+  --color-logo: #555252;
+  --color-white: #ffffff;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* header */
+
+.header {
+  padding: 36px 0;
+  margin: 0 0 60px;
+}
+
+.logo {
+  float: left;
+  font-size: 0;
+  text-decoration: none;
+}
+
+.nav {
+  float: right;
+}
+
+.nav-list {
+  padding: 0;
+  margin: 2px 0 0;
+  list-style: none;
+}
+
+.nav-list li {
+  float: left;
+}
+
+.nav-list li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.nav-list li a {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: var(--font-bold);
+  color: var(--color-dark);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: -0.2px;
+}
+
+.nav-list li a:hover {
+  color: var(--color-green);
+}
+
+/* section head */
+
+.section-head {
+  margin: 0 0 92px;
+  font-size: 48px;
+  font-family: inherit;
+  font-weight: var(--font-black);
+  color: var(--color-head);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -1.2px;
+}
+
+.section-head::after {
+  content: '';
+  display: block;
+  margin: 20px auto 0;
+  width: 164px;
+  height: 7px;
+  background-color: var(--color-green);
+}
+
+/* section products */
+
+.products {
+  margin: 0 0 96px;
+}
+
+.products-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.products-list li {
+  float: left;
+  width: 255px;
+  margin: 0 30px 30px 0;
+}
+
+.products-list li:nth-child(4n + 4) {
+  margin: 0 0 30px;
+}
+
+.products-list li:nth-last-child(-n + 4) {
+  margin: 0 30px 0 0;
+}
+
+.products-list li:last-child {
+  margin: 0;
+}
+
+.card {
+  position: relative;
+}
+
+.card:hover .card-info::before {
+  left: 0;
+}
+
+.card-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background-color: #323232;
+  overflow: hidden;
+}
+
+.card-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 40px;
+  width: 100%;
+  background-color: var(--color-green);
+  transition: all 0.3s ease;
+}
+
+.card-info__title {
+  position: relative;
+  z-index: 1;
+  float: left;
+  margin: 0;
+  padding: 0 12px;
+  font-size: 18px;
+  line-height: 40px;
+  font-family: inherit;
+  font-weight: var(--font-black);
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: -0.4px;
+}
+
+.card-info__price {
+  position: relative;
+  z-index: 1;
+  float: right;
+  margin: 0;
+  padding: 0 12px;
+  font-size: 18px;
+  line-height: 40px;
+  font-family: inherit;
+  font-weight: var(--font-black);
+  color: var(--color-white);
+  text-transform: uppercase;
+  background-color: rgba(255,255,255, .44);
+}
+
+/* section news */
+
+.news {
+  margin: 0 0 96px;
+}
+
+.news-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news-list li {
+  float: left;
+  width: 350px;
+  margin: 0 30px 0 0;
+}
+
+.news-list li:last-child {
+  margin: 0;
+}
+
+.article__images {
+  margin: 0 0 8px;
+}
+
+.article__head {
+  margin: 0 0 22px;
+  font-size: 18px;
+  line-height: 26px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: var(--font-semibold);
+  color: var(--color-logo);
+  letter-spacing: -0.4px;
+}
+
+.article__head::after {
+  content: '';
+  display: block;
+  margin: 8px 0 0;
+  width: 136px;
+  height: 3px;
+  background-color: var(--color-green);
+}
+
+.article__text {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 26px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: var(--font-regular);
+  color: var(--color-logo);
+  letter-spacing: -0.3px;
+}
+
+.article__btn {
+  display: inline-block;
+  padding: 12px 42px;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: var(--font-light);
+  color: var(--color-white);
+  border: none;
+  background-color: var(--color-green);
+  box-shadow: 2px 2px 5px rgba(0,0,0, .39);
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.article__btn:active {
+  box-shadow: none;
+}
