@@ -39,7 +39,6 @@ img {
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #e9f0fd;
 }
 
 .container {
@@ -200,7 +199,7 @@ body {
 
 .products {
   padding: 90px 0 96px;
-
+  background-color: #e9f0fd;
 }
 
 .products-list {
