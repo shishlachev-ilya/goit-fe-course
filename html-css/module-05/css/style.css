@@ -59,7 +59,6 @@ body {
 
 .logo {
   float: left;
-  font-size: 0;
   text-decoration: none;
 }
 
@@ -100,7 +99,6 @@ body {
 /* slider */
 .slider {
   position: relative;
-  margin: 0 0 90px;
 }
 
 .slider-list {
@@ -201,7 +199,8 @@ body {
 /* section products */
 
 .products {
-  padding: 0 0 96px;
+  padding: 90px 0 96px;
+
 }
 
 .products-list {
@@ -264,7 +263,7 @@ body {
   margin-right: 10px;
 }
 
-.overlay-list a {
+.overlay-list button {
   display: block;
   width: 48px;
   height: 48px;
@@ -274,26 +273,27 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   transition: all .3s ease;
+  cursor: pointer;
 }
 
-.overlay-list a.heart {
+.overlay-list button.heart {
   background-image: url(../img/icons/heart.png);
 }
 
-.overlay-list a.arrows {
+.overlay-list button.arrows {
   background-image: url(../img/icons/arrows.png);
 }
 
-.overlay-list a.clock {
+.overlay-list button.clock {
   background-image: url(../img/icons/clock.png);
 }
 
-.overlay-list a:hover {
+.overlay-list button:hover {
   border-color: var(--color-green);
   background-color: var(--color-green);
 }
 
-.overlay-basket-link {
+.overlay-basket-btn {
   display: block;
   margin: 0 auto;
   padding: 14px 12px 14px 60px;
@@ -309,10 +309,10 @@ body {
   background-position: left 10px center;
   border: 1px solid var(--color-white);
   transition: all .3s ease;
-  text-decoration: none;
+  cursor: pointer;
 }
 
-.overlay-basket-link:hover {
+.overlay-basket-btn:hover {
   border-color: #323232;
   background-color: #323232;
 }
