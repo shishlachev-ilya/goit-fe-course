@@ -1,0 +1,341 @@
+/* fonts */
+
+@font-face {
+  font-family: 'DroidSerifItalic';
+  src: url('../fonts/DroidSerifItalic/DroidSerifItalic.woff2') format('woff2'),
+  url('../fonts/DroidSerifItalic/DroidSerifItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('../fonts/montserrat/montserrat.woff2') format('woff2'),
+  url('../fonts/montserrat/montserrat.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserratbold';
+  src: url('../fonts/montserratbold/montserratbold.woff2') format('woff2'),
+  url('../fonts/montserratbold/montserratbold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoSlabRegular';
+  src: url('../fonts/RobotoSlabRegular/RobotoSlabRegular.woff2') format('woff2'),
+  url('../fonts/RobotoSlabRegular/RobotoSlabRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* global style */
+
+:root {
+  --font-roboto: 'RobotoSlabRegular', sans-serif;
+  --font-broid: 'DroidSerifItalic', sans-serif;
+  --font-regular: 'montserrat', sans-serif;
+  --font-bold: 'montserratbold', sans-serif;
+  --color-main: #fed136;
+  --color-head: #222222;
+  --color-white: #ffffff;
+  --color-text: #777777;
+  --color-placeholder: #bbbbbb;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.15;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+/* header */
+
+.header {
+  padding: 30px 0;
+
+  background-color: var(--color-white);
+}
+
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.nav {
+  height: 23px;
+}
+
+.nav-list {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0;
+  margin: 0;
+  height: 23px;
+  list-style: none;
+}
+
+.nav-list .nav-list__item:first-child .nav-list__link {
+  padding: 0 20px 0 0;
+}
+
+.nav-list .nav-list__item:last-child .nav-list__link {
+  padding: 0 0 0 20px;
+}
+
+.nav-list .nav-list__link {
+  position: relative;
+  display: block;
+  padding: 0 20px;
+  font-size: 14px;
+  color: var(--color-head);
+  font-family: var(--font-regular);
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 200ms linear;
+}
+
+.nav-list .nav-list__link:hover {
+  color: var(--color-main);
+}
+
+/* section-header */
+
+.section-header {
+  margin: 0;
+  text-align: center;
+}
+
+.section-header .section-header__head {
+  margin: 0 0 12px;
+  font-size: 40px;
+  font-family: var(--font-bold);
+  color: var(--color-head);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.section-header .section-header__head_white {
+  color: var(--color-white);
+}
+
+.section-header .section-header__desc {
+  margin: 0;
+  font-size: 16px;
+  font-family: var(--font-broid);
+  color: var(--color-text);
+}
+
+/* services */
+
+.services {
+  padding: 80px 0 120px;
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 76px 0 0;
+  list-style: none;
+}
+
+.services-list .services-list__item {
+  width: 280px;
+}
+
+.article {
+  padding: 96px 0 0;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.article.commerce {
+  background-image: url(../img/services/1.jpg);
+}
+
+.article.response {
+  background-image: url(../img/services/2.jpg);
+}
+
+.article.security {
+  background-image: url(../img/services/3.jpg);
+}
+
+.article .article__head {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-family: var(--font-bold);
+  color: var(--color-head);
+  text-transform: capitalize;
+  letter-spacing: -0.25px;
+}
+
+.article .article__text {
+  margin: 0;
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  color: var(--color-text);
+  line-height: 21px;
+  letter-spacing: -0.25px;
+}
+
+/* footer */
+
+.footer {
+  padding: 100px 0 120px;
+  background: var(--color-head) url(../img/map.png) no-repeat right bottom 20px;
+}
+
+.form {
+  padding: 78px 0 0;
+}
+
+.form .form__row {
+  display: flex;
+  margin: 0 -15px;
+}
+
+.form .form__row:last-child {
+  margin: 30px 0 0;
+}
+
+.form .form__col {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 0 15px;
+}
+
+.form .form__field {
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-family: var(--font-bold);
+  letter-spacing: -0.25px;
+  color: var(--color-head);
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 1px solid var(--color-placeholder);
+  outline: none;
+}
+
+.form .form__field:not(:last-child) {
+  margin: 0 0 26px;
+}
+
+.form .form__area {
+  width: 100%;
+  height: 202px;
+  padding: 20px;
+  font-size: 14px;
+  font-family: var(--font-bold);
+  letter-spacing: -0.25px;
+  color: var(--color-head);
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 1px solid var(--color-placeholder);
+  resize: none;
+  outline: none;
+}
+
+.form .form__field::-webkit-input-placeholder,
+.form .form__area::-webkit-input-placeholder {
+  color: var(--color-placeholder);
+}
+
+.form .form__field::-moz-placeholder,
+.form .form__area::-moz-placeholder {
+  color: var(--color-placeholder);
+}
+
+.form .form__field:-ms-input-placeholder,
+.form .form__area:-ms-input-placeholder {
+  color: var(--color-placeholder);
+}
+
+.form .form__field:-moz-placeholder,
+.form .form__area:-moz-placeholder {
+  color: var(--color-placeholder);
+}
+
+.form .form__field:focus::-webkit-input-placeholder,
+.form .form__area:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form .form__field:focus::-moz-placeholder,
+.form .form__area:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.form .form__field:focus:-ms-input-placeholder,
+.form .form__area:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form .form__field:focus:-moz-placeholder,
+.form .form__area:focus:-moz-placeholder {
+  color: transparent;
+}
+
+.form .form__field:required:invalid,
+.form .form__area:required:invalid {
+  border-color: red;
+}
+
+.form .form__field:required:valid,
+.form .form__area:required:valid {
+  border-color: green;
+}
+
+.form .form__btn {
+  margin: 0 auto;
+  padding: 22px 46px;
+  font-size: 18px;
+  color: var(--color-white);
+  font-family: var(--font-bold);
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 1px solid var(--color-main);
+  background-color: var(--color-main);
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+
+.form .form__btn:hover {
+  background-color: transparent;
+  color: var(--color-main);
+}

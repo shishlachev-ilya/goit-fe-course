@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>Module-07</title>
+
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- header -->
+<header class="header">
+  <div class="container">
+    <div class="header__row">
+      <a href="#" class="logo">
+        <img class="logo__img" src="img/logo.png" alt="mogo" width="86" height="23">
+      </a>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">home</a>
+          </li>
+
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">services</a>
+          </li>
+
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">portfolio</a>
+          </li>
+
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">about</a>
+          </li>
+
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="services">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="section-header__head">Services</h2>
+
+        <p class="section-header__desc">Proin iaculis purus consequat sem cure.</p>
+      </header>
+
+      <ul class="services-list">
+        <li class="services-list__item">
+          <article class="article commerce">
+            <h3 class="article__head">E-Commerce</h3>
+
+            <p class="article__text">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit
+              aenean rhoncus posuere odio in tincidunt.
+            </p>
+          </article>
+        </li>
+
+        <li class="services-list__item">
+          <article class="article response">
+            <h3 class="article__head">Responsive Web</h3>
+
+            <p class="article__text">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit
+              aenean rhoncus posuere odio in tincidunt.
+            </p>
+          </article>
+        </li>
+
+        <li class="services-list__item">
+          <article class="article security">
+            <h3 class="article__head">Web Security</h3>
+
+            <p class="article__text">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit
+              aenean rhoncus posuere odio in tincidunt.
+            </p>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<!--footer-->
+<footer class="footer">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-header__head section-header__head_white">contact us</h2>
+
+      <p class="section-header__desc">Proin iaculis purus consequat sem cure. </p>
+    </header>
+
+    <form class="form" name="contact-form" action="#">
+      <div class="form__row">
+        <div class="form__col">
+          <input class="form__field" type="text" name="name" autocomplete="off" placeholder="your name*" required>
+
+          <input class="form__field" type="email" name="emil" autocomplete="off" placeholder="your email*" required>
+
+          <input class="form__field" type="text" name="subject" autocomplete="off" placeholder="subject">
+        </div>
+        <div class="form__col">
+          <textarea name="message" class="form__area" autocomplete="off" placeholder="your message*"
+                    required></textarea>
+        </div>
+      </div>
+      <div class="form__row">
+        <button class="form__btn" type="submit">send message</button>
+      </div>
+    </form>
+  </div>
+</footer>
+</body>
+</html>
