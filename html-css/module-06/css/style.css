@@ -288,6 +288,14 @@ body {
   opacity: 1;
 }
 
+.team-box:hover .social-list .social-list__item.item-1,
+.team-box:hover .social-list .social-list__item.item-2,
+.team-box:hover .social-list .social-list__item.item-3,
+.team-box:hover .social-list .social-list__item.item-4 {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .team-box .team-box__img {
   position: relative;
   z-index: 2;
@@ -339,14 +347,6 @@ body {
   opacity: 0;
   transform: translateX(40px);
   transition: all 200ms linear 400ms;
-}
-
-.overlay:hover .social-list .social-list__item.item-1,
-.overlay:hover .social-list .social-list__item.item-2,
-.overlay:hover .social-list .social-list__item.item-3,
-.overlay:hover .social-list .social-list__item.item-4 {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 .social-list .social-list__item:not(:last-child) {
