@@ -49,7 +49,7 @@ body {
 .header__row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .logo {
@@ -57,40 +57,33 @@ body {
 }
 
 .nav {
-  height: 23px;
+  font-size: 0;
 }
 
 .nav-list {
   display: inline-flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
   padding: 0;
   margin: 0;
-  height: 23px;
   list-style: none;
 }
 
-.nav-list .nav-list__item:first-child .nav-list__link {
-  margin: 0 28px 0 0;
-}
-
-.nav-list .nav-list__item:last-child .nav-list__link {
-  margin: 0 0 0 28px;
+.nav-list .nav-list__item:not(:last-child) {
+  margin-right: 56px;
 }
 
 .nav-list .nav-list__link {
   position: relative;
   display: block;
-  margin: 0 28px;
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
   font-weight: var(--font-regular);
   color: var(--color-main);
   text-transform: uppercase;
   letter-spacing: -0.2px;
-
   text-decoration: none;
-
   transition: all .2s linear;
 }
 
