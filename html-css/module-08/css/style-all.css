@@ -29,79 +29,84 @@ body {
   line-height: 1.15;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .container {
   margin: 0 auto;
 }
 
-/* header */
+/*header*/
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.header .header__row {
-  display: flex;
-  align-items: center;
-}
-
-.user-nav .user-nav__link {
-  display: inline-block;
-  padding: 8px 16px;
-  font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: var(--color-white);
-  text-decoration: none;
-}
-
-.user-nav .user-nav__link_sign-up {
-  border: 2px solid var(--color-white);
-  border-radius: 50px;
-}
-
-/* main banner */
-
-.main-banner {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.main-banner .main-banner__row {
+.nav {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.main-banner .main-banner__head {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: var(--color-white);
-  text-align: center;
-  text-transform: uppercase;
+.btn-box {
+  display: flex;
 }
 
-.main-banner .main-banner__text {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  color: var(--color-white);
-}
-
-.main-banner .main-banner__link {
-  padding: 12px 0;
+.btn-box__item {
+  padding: 7px 16px;
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: var(--color-white);
   text-decoration: none;
+}
+
+.btn-box__item_bordered {
+  border: 2px solid var(--color-white);
+  border-radius: 50px;
+}
+
+.title-box {
+  margin: 0 auto;
+  max-width: 550px;
+  text-align: center;
+}
+
+.title-box__head {
+  margin: 0 0 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.title-box__text {
+  margin: 0 0 34px;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: var(--color-white);
+  letter-spacing: 1px;
+}
+
+.title-box__link {
+  display: block;
+  margin: auto;
+  padding: 12px 0;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--color-white);
   text-align: center;
   background-color: var(--color-main);
   border-radius: 50px;
+  text-decoration: none;
 }
 
 /* section-header */
@@ -214,34 +219,31 @@ body {
     width: 748px;
   }
 
-  .header .header__row {
-    justify-content: space-between;
-    padding: 40px;
-  }
-
-  .main-banner {
+  .header {
     min-height: 700px;
     background-image: url(../img/tablet-banner.jpg);
   }
 
-  .main-banner .main-banner__row {
-    min-height: 700px;
+  .nav {
+    padding: 36px 0;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .main-banner .main-banner__head {
-    max-width: 520px;
+  .top {
+    padding: 0 50px 110px;
+  }
+
+  .title-box__head {
     font-size: 52px;
-    letter-spacing: -1.2px;
-    line-height: 63px;
   }
 
-  .main-banner .main-banner__text {
+  .title-box__text {
     font-size: 24px;
-    margin: 26px 0 38px;
   }
 
-  .main-banner .main-banner__link {
-    min-width: 224px;
+  .title-box__link {
+    max-width: 226px;
   }
 
   .partner-list {
@@ -275,12 +277,12 @@ body {
     width: 940px;
   }
 
-  .header .header__row {
-    padding: 40px 0;
+  .header {
+    background-image: url(../img/desctop-banner.jpg);
   }
 
-  .main-banner {
-    background-image: url(../img/desctop-banner.jpg);
+  .top {
+    padding: 0 0 110px;
   }
 
   .partner-list {
@@ -314,41 +316,36 @@ body {
     padding: 0 18px;
   }
 
-  .header .header__row {
-    padding: 16px 0;
-    flex-direction: column;
-  }
-
-  .logo {
-    order: 2;
-    margin: 110px 0 0;
-  }
-
-  .user-nav {
-    order: 1;
-  }
-
-  .main-banner {
+  .header {
     min-height: 540px;
     background-image: url(../img/mobile-banner.jpg);
   }
 
-  .main-banner .main-banner__row {
-    min-height: 540px;
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 40px;
   }
 
-  .main-banner .main-banner__head {
-    margin: 34px 0 0;
+  .btn-box {
+    order: 1;
+    padding-bottom: 110px;
+  }
+
+  .logo {
+    order: 2;
+  }
+
+  .title-box__head {
     font-size: 30px;
   }
 
-  .main-banner .main-banner__text {
+  .title-box__text {
     font-size: 18px;
-    margin: 20px 0;
   }
 
-  .main-banner .main-banner__link {
-    min-width: 280px;
+  .title-box__link {
+    max-width: 280px;
   }
 
   .partner-list .partner-list__item:not(:last-child) {
