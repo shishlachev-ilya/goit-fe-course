@@ -1,0 +1,12 @@
+.team-box__text {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  text-align: center;
+  font-size: 15px;
+  line-height: 24px;
+  color: $c-text;
+  font-family: 'Roboto', sans-serif;
+  font-weight: $f-light;
+  font-style: italic;
+}

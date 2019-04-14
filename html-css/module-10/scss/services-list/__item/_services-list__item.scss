@@ -1,0 +1,8 @@
+.services-list__item {
+  width: 400px;
+  margin: 0 0 94px;
+
+  &:nth-last-child(-n + 3) {
+    margin: 0;
+  }
+}

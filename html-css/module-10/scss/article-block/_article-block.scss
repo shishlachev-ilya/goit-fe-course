@@ -1,0 +1,15 @@
+.article-block {
+  position: relative;
+  padding: 0 0 0 92px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 28px;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

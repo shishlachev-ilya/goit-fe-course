@@ -1,0 +1,17 @@
+.header-link {
+  padding: 10px 28px;
+  font-size: 14px;
+  color: $c-white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 3px solid $c-white;
+  background-color: transparent;
+  text-decoration: none;
+  transition: all 200ms linear;
+
+  &:hover {
+    background-color: $c-white;
+    color: $c-yellow;
+  }
+}
