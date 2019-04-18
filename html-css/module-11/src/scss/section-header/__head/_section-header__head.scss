@@ -1,0 +1,16 @@
+.section-header__head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: $c-head;
+
+  &::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    margin: 34px auto 0;
+    background-color: $c-red;
+  }
+}

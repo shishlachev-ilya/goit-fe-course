@@ -1,0 +1,6 @@
+.services-list {
+  @extend %list-default;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

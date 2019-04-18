@@ -1,0 +1,20 @@
+.social-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  text-decoration: none;
+  background-color: $c-yellow;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 100ms linear;
+
+  &:hover {
+    background-color: $c-red;
+  }
+
+  &:hover .social-list__icon {
+    fill: $c-white;
+  }
+}

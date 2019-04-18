@@ -1,0 +1,50 @@
+.form__field {
+  width: 230px;
+  height: 40px;
+  padding: 10px;
+  font-size: 15px;
+  line-height: 24px;
+  color: $c-text;
+  font-family: 'Roboto', sans-serif;
+  font-weight: $f-light;
+  font-style: italic;
+  border: 1px solid #e5e5e5;
+  border-right: none;
+  outline: none;
+
+  &::-webkit-input-placeholder {
+    font-size: 15px;
+    line-height: 24px;
+    color: $c-text;
+    font-family: 'Roboto', sans-serif;
+    font-weight: $f-light;
+    font-style: italic;
+  }
+
+  &::-moz-placeholder {
+    font-size: 15px;
+    line-height: 24px;
+    color: $c-text;
+    font-family: 'Roboto', sans-serif;
+    font-weight: $f-light;
+    font-style: italic;
+  }
+
+  &:-ms-input-placeholder {
+    font-size: 15px;
+    line-height: 24px;
+    color: $c-text;
+    font-family: 'Roboto', sans-serif;
+    font-weight: $f-light;
+    font-style: italic;
+  }
+
+  &:-moz-placeholder {
+    font-size: 15px;
+    line-height: 24px;
+    color: $c-text;
+    font-family: 'Roboto', sans-serif;
+    font-weight: $f-light;
+    font-style: italic;
+  }
+}

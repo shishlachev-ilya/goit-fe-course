@@ -1,0 +1,36 @@
+.team-box {
+  position: relative;
+  display: block;
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 470px;
+    background-color:$c-main;
+  }
+
+  &:hover .team-box__img {
+    transform: translate(-10px, -10px);
+  }
+
+  &:hover .team-box__overlay {
+    opacity: 1;
+  }
+
+  &:hover .social-list .social-list__item {
+    opacity: 1;
+  }
+}
+
+.team-box:hover .social-list .social-list__item.item-1,
+.team-box:hover .social-list .social-list__item.item-2,
+.team-box:hover .social-list .social-list__item.item-3,
+.team-box:hover .social-list .social-list__item.item-4 {
+  opacity: 1;
+  transform: translateX(0);
+}

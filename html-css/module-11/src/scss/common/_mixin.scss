@@ -1,0 +1,11 @@
+@mixin article-icon($selector, $list) {
+  @each $item in $list {
+    .article-block_#{$item}::before {
+      background-image: url(../img/icons/#{$item}.svg);
+    }
+  }
+}
+
+@mixin btn (){
+
+}
