@@ -22,26 +22,29 @@ if (message === null) {
   alert('Отмена пользователем!');
 } else {
   message = message.toLowerCase();
+
   switch (message) {
     case 'китай':
-      alert('Доставка в ' + capitalizationFirstLetter(message) + ' будет стоить 100 кредитов');
+      message = 'Доставка в ' + capitalizationFirstLetter(message) + ' будет стоить 100 кредитов';
       break;
     case 'южная америка':
-      alert('Доставка в ' + capitalizationFirstLetter(message) + ' будет стоить 250 кредитов');
+      message = 'Доставка в ' + capitalizationFirstLetter(message) + ' будет стоить 250 кредитов';
       break;
     case 'австралия':
-      alert('Доставка в ' + capitalizationFirstLetter(message) + ' будет стоить 170 кредитов');
+      message = 'Доставка в ' + capitalizationFirstLetter(message) + ' будет стоить 170 кредитов';
       break;
     case 'индия':
-      alert('Доставка в ' + capitalizationFirstLetter(message) + ' будет стоить 80 кредитов');
+      message = 'Доставка в ' + capitalizationFirstLetter(message) + ' будет стоить 80 кредитов';
       break;
     case 'ямайка':
-      alert('Доставка в ' + capitalizationFirstLetter(message) + ' будет стоить 120 кредитов');
+      message = 'Доставка в ' + capitalizationFirstLetter(message) + ' будет стоить 120 кредитов';
       break;
     default:
-      alert('В вашей стране доставка не доступна!');
+      message = 'В вашей стране доставка не доступна!';
   }
 }
+
+alert(message);
 
 function capitalizationFirstLetter(str) {
   return str.replace(/(^|\s)\S/g, function (a) {
