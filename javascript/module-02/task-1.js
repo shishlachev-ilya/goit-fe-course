@@ -20,13 +20,13 @@ let total = 0;
 
 do {
   input = prompt('Введите число!');
-  if (!isNaN(input) && input !== null && input !== '') {
-    numbers.push(input);
-  } else if (input === null) {
+  if (input === null) {
     for (let i = 0; i < numbers.length; i++) {
       total += parseInt(numbers[i]);
     }
     alert(`Общая сумма чисел равна = ${total}`);
+  } else if (!isNaN(input) && input !== '') {
+    numbers.push(input);
   } else {
     alert('Не число!');
   }
