@@ -17,24 +17,20 @@ const isLoginValid = function (login) {
  * @param {string} login
  * @returns {boolean}
  */
-const isLoginUnique = function (all, login) {
-  return !all.includes(login);
-};
+const isLoginUnique = (all, login) => !all.includes(login);
 
 /**
  * Displays the status of adding a login to the console
  * @param {string} message
  */
-const printMessage = function (message) {
-  return console.log(message);
-};
+const printMessage = message => console.log(message);
 
 /**
  * Add login if passed checks
  * @param {array} all
  * @param {string} login
  */
-const addLogin = function (all, login) {
+const addLogin = (all, login) => {
   if (!(isLoginValid(login))) {
     printMessage('Mistake! Login must be from 4 to 16 characters');
   } else {
