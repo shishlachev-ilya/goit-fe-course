@@ -17,52 +17,62 @@ const notepad = {
         return this.notes[key];
       }
     }
+
+    return undefined;
   },
   saveNote(note) {
     this.notes.push(note);
+
     return note;
   },
   deleteNote(id) {
-    for (const key in this.notes) {
-      if (this.notes[key].id === id) {
-        this.notes.splice(key, 1);
-      }
-    }
+    const note = this.findNoteById(id);
+    const noteIndex = this.notes.indexOf(note);
+
+    if (!note) return;
+
+    this.notes.splice(noteIndex, 1);
   },
   updateNoteContent(id, updatedContent) {
-    for (const key in this.notes) {
-      if (this.notes[key].id === id) {
-        for (let item in updatedContent) {
-          this.notes[key][item] = updatedContent[item];
-        }
-        return this.notes[key];
-      }
+    const note = this.findNoteById(id);
+
+    if (!note) return;
+
+    for (let item in updatedContent) {
+      note[item] = updatedContent[item];
     }
+
+    return note;
   },
   updateNotePriority(id, priority) {
-    for (const key in this.notes) {
-      if (this.notes[key].id === id) {
-        this.notes[key].priority = priority;
-        return this.notes[key];
-      }
-    }
+    const note = this.findNoteById(id);
+
+    if (!note) return;
+
+    note.priority = priority;
+
+    return note;
   },
   filterNotesByQuery(query) {
     const queryArray = [];
+
     for (const key in this.notes) {
       if (this.notes[key].title.toLowerCase().includes(query.toLowerCase()) || this.notes[key].body.toLowerCase().includes(query.toLowerCase())) {
         queryArray.push(this.notes[key]);
       }
     }
+
     return queryArray;
   },
   filterNotesByPriority(priority) {
     const priorityArray = [];
+
     for (const key in this.notes) {
       if (this.notes[key].priority === priority) {
         priorityArray.push(this.notes[key]);
       }
     }
+    
     return priorityArray;
   },
 };
@@ -94,7 +104,6 @@ notepad.saveNote({
   body: 'Winter is coming! Need some really warm clothes: shoes, sweater, hat, jacket, scarf etc. Maybe should get a set of sportwear as well so I\'ll be able to do some excercises in the park.',
   priority: Priority.LOW,
 });
-
 
 console.log('Все текущие заметки: ', notepad.getNotes());
 
@@ -159,6 +168,3 @@ console.log(
  */
 notepad.deleteNote('id-2');
 console.log('Заметки после удаления с id -2: ', notepad.getNotes());
-
-
-
