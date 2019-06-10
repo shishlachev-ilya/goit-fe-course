@@ -12,13 +12,11 @@ const notepad = {
     return this.notes;
   },
   findNoteById(id) {
-    for (const key in this.notes) {
-      if (this.notes[key].id === id) {
-        return this.notes[key];
-      }
-    }
+    const note = this.notes.find(function (item) {
+      return item.id === id;
+    });
 
-    return undefined;
+    return note ? note : undefined;
   },
   saveNote(note) {
     this.notes.push(note);
@@ -167,4 +165,4 @@ console.log(
  * Повторил HTML и CSS, удаляю запись c id-2
  */
 notepad.deleteNote('id-2');
-console.log('Заметки после удаления с id -2: ', notepad.getNotes());
+console.log('Заметки после удаления с id-2: ', notepad.getNotes());
